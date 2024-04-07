@@ -7,11 +7,11 @@
 
 #### Linear Regression:
 
-- [ ] Implement it
+- [x] Implement it
 
 #### Logistic Regression:
 
-- [ ] Implement it
+- [x] Implement it
 
 #### MLP:
 
