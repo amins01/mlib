@@ -7,22 +7,21 @@ from mlib.helpers.data_preprocessing import DataPreprocessing
 class NaiveBayes(BaseClassifier):
     
     def likelihood(self, sample, means, std_devs):
+        '''Likelihood of a sample under a Gaussian distribution'''
         likelihoods = 1 / np.sqrt(2 * math.pi * np.square(std_devs)) * np.exp(-np.square(sample - means) / (2 * np.square(std_devs)))
         return np.prod(likelihoods)
 
     def fit(self, X, y):
-        self.prior_by_class = {}
         self.means_by_class = {}
         self.std_devs_by_class = {}
         self.X_train = X
         self.y_train = y
         self.classes, classes_counts = np.unique(y, return_counts=True)
-        priors = classes_counts / len(classes_counts)
+        self.priors = classes_counts / len(y)
 
         Xy_train = np.column_stack((X, y))
 
-        for i, c in enumerate(self.classes):
-            self.prior_by_class[c] = priors[i]
+        for c in self.classes:
             # Create a mask for the samples of that class
             c_mask = Xy_train[:, -1] == c
             means = np.mean(Xy_train[c_mask], axis=0)[:-1]
@@ -39,7 +38,7 @@ class NaiveBayes(BaseClassifier):
             
             for c_i, c in enumerate(self.classes):
                 likelihood = self.likelihood(sample, self.means_by_class[c], self.std_devs_by_class[c])
-                posterior = likelihood * self.prior_by_class[c]
+                posterior = likelihood * self.priors[c_i]
                 posteriors[c_i] = posterior
 
             pred[i] = self.classes[np.argmax(posteriors)]
