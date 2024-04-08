@@ -1,4 +1,3 @@
-import sys
 import numpy as np
 
 from mlib.base.base_classifier import BaseClassifier

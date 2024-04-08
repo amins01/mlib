@@ -17,6 +17,14 @@
 
 - [ ] Implement it
 
+#### Support Vector Machines:
+
+- [ ] Implement it
+
+#### Naive Bayes:
+
+- [x] Implement it
+
 #### XGBoost:
 
 - [ ] Implement it
