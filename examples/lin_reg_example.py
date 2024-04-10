@@ -26,6 +26,6 @@ def lin_reg_example():
     print('pred:', y_pred)
 
     r2 = r2_score(y_test, y_pred)
-    print('R^2 Scrore: ', r2)
+    print('R^2 Score: ', r2)
 
 lin_reg_example()

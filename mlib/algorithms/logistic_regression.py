@@ -1,7 +1,7 @@
 import numpy as np
 
 from mlib.base.base_classifier import BaseClassifier
-from mlib.helpers.data_preprocessing import DataPreprocessing
+from mlib.utils import vector_to_one_hot_matrix
 
 class LogisticRegression(BaseClassifier):
     def __init__(self, learning_rate = 0.05):
@@ -24,7 +24,7 @@ class LogisticRegression(BaseClassifier):
 
         m = X.shape[0]
         num_classes = len(np.unique(y))
-        y = DataPreprocessing.vector_to_one_hot_matrix(y, num_classes)
+        y = vector_to_one_hot_matrix(y, num_classes)
         self.weights = np.zeros((X.shape[1], num_classes))
         self.biases = np.zeros(num_classes)
 
