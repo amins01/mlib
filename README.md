@@ -1,30 +1,24 @@
-## TODO
+# MLIB - Machine Learning from Scratch
 
-#### KNN:
+This library is a collection of fundamental machine learning algorithms and tools implemented from scratch using only numpy.
 
-- [ ] Add other distance metrics (manhattan, minkowski, ...)
-- [ ] Improve algo (Ball Tree, KD Tree)
+## Implemented Algorithms
 
-#### Linear Regression:
+- **K-Nearest Neighbors (KNN)**: Uses nearest neighbors to make a prediciton (classification and regression tasks).
+- **Linear Regression**: Fits a line or hyperplane to the data to make predictions (regression tasks).
+- **Logistic Regression**: Uses gradient descent to minimize the loss function (cross-entropy) to find the best parameters for the sigmoid function (classification tasks).
+- **Multilayer Perceptron (MLP)**: A simple neural network with 1 hidden layer (classification and regression tasks).
+- **Naive Bayesian**: Uses Bayes' theorem (assuming feature independence) to make predictions (classification tasks).
 
-- [x] Implement it
+## Upcoming Algorithms
 
-#### Logistic Regression:
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+- Gradient Boosting Machine
+- XGBoost
+- k-Means Clustering
 
-- [x] Implement it
+## Examples
 
-#### MLP:
-
-- [ ] Implement it
-
-#### Support Vector Machines:
-
-- [ ] Implement it
-
-#### Naive Bayes:
-
-- [x] Implement it
-
-#### XGBoost:
-
-- [ ] Implement it
+The `examples` directory contains small scripts showing the usage of each algorithm implemented in this library.
