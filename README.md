@@ -6,9 +6,10 @@ This library is a collection of fundamental machine learning algorithms and tool
 
 - **K-Nearest Neighbors (KNN)**: Uses nearest neighbors to make a prediciton (classification and regression tasks).
 - **Linear Regression**: Fits a line or hyperplane to the data to make predictions (regression tasks).
-- **Logistic Regression**: Uses gradient descent to minimize the loss function (cross-entropy) to find the best parameters for the sigmoid function (classification tasks).
+- **Logistic Regression**: Fits a sigmoid function to the data to make predictions (classification tasks).
 - **Multilayer Perceptron (MLP)**: A simple neural network with 1 hidden layer (classification and regression tasks).
 - **Naive Bayes**: Uses Bayes' theorem (assuming feature independence) to make predictions (classification tasks).
+- **K-Means Clustering**: An unsupervised learning algorithm that tries to group similar data into k clusters.
 
 ## Upcoming Algorithms
 
@@ -17,7 +18,6 @@ This library is a collection of fundamental machine learning algorithms and tool
 - Support Vector Machine (SVM)
 - Gradient Boosting Machine
 - XGBoost
-- k-Means Clustering
 
 ## Examples
 

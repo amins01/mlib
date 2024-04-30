@@ -23,3 +23,9 @@ def logsumexp(a, axis, keepdims, stable):
 
 def euclidean_distance(a, b):
     return np.sqrt(np.sum(np.square(a - b)))
+
+def contains_point(X, p):
+    for x in X:
+        if all(x[i] == p[i] for i in range(len(x))):
+            return True
+    return False
