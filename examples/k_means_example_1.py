@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 
 from mlib.algorithms.k_means import KMeans
 
-def k_means_example():
+def k_means_example_1():
     iris = datasets.load_iris()
 
     X = iris.data
@@ -21,4 +21,4 @@ def k_means_example():
     pred = k_means.predict(X_test)
     print('pred:', pred)
 
-k_means_example()
+k_means_example_1()

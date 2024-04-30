@@ -42,14 +42,13 @@ class KMeans(BaseClusterer):
             self.centroids = [X[np.random.choice(X.shape[0])]]
 
             for _ in range(self.k - 1):
-                distances = np.zeros((X.shape[0],))
+                min_distances_to_centroids = np.zeros((X.shape[0],))
 
-                for c in self.centroids:
-                    c_distances = [0 if contains_point(self.centroids, x) else euclidean_distance(c, x) for x in X]
-                    farthest_point_index = np.argmax(c_distances)
-                    distances[farthest_point_index] = max(distances[farthest_point_index], c_distances[farthest_point_index])
+                for i, x in enumerate(X):
+                    c_distances = [float('inf') if contains_point(self.centroids, x) else euclidean_distance(c, x) for c in self.centroids]
+                    min_distances_to_centroids[i] = np.min(c_distances)
 
-                self.centroids.append(X[np.argmax(distances)])
+                self.centroids.append(X[np.argmax(min_distances_to_centroids)])
 
             self.centroids = np.array(self.centroids)
         else:
