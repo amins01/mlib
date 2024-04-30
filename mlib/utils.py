@@ -20,3 +20,6 @@ def logsumexp(a, axis, keepdims, stable):
     sum = np.sum(np.exp(a - max), axis=axis, keepdims=keepdims)
 
     return np.log(sum) + max
+
+def euclidean_distance(a, b):
+    return np.sqrt(np.sum(np.square(a - b)))

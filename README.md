@@ -8,7 +8,7 @@ This library is a collection of fundamental machine learning algorithms and tool
 - **Linear Regression**: Fits a line or hyperplane to the data to make predictions (regression tasks).
 - **Logistic Regression**: Uses gradient descent to minimize the loss function (cross-entropy) to find the best parameters for the sigmoid function (classification tasks).
 - **Multilayer Perceptron (MLP)**: A simple neural network with 1 hidden layer (classification and regression tasks).
-- **Naive Bayesian**: Uses Bayes' theorem (assuming feature independence) to make predictions (classification tasks).
+- **Naive Bayes**: Uses Bayes' theorem (assuming feature independence) to make predictions (classification tasks).
 
 ## Upcoming Algorithms
 
